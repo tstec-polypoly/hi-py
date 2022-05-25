@@ -19,7 +19,7 @@ Learn to deploy a simple Python "Hello, World!" script into Kubernetes.
 ## Inspecting the Cluster
 
 ```
-kubectl get nodes -A
+# kubectl get nodes -A
 NAME                            STATUS   ROLES           AGE   VERSION
 k8s-hello-world-control-plane   Ready    control-plane   63s   v1.24.0
 k8s-hello-world-worker          Ready    <none>          41s   v1.24.0
@@ -27,7 +27,7 @@ k8s-hello-world-worker2         Ready    <none>          42s   v1.24.0
 ```
 
 ```
-kubectl get pods -A
+# kubectl get pods -A
 NAMESPACE            NAME                                                    READY   STATUS    RESTARTS   AGE
 kube-system          coredns-6d4b75cb6d-89n7g                                1/1     Running   0          33s
 kube-system          coredns-6d4b75cb6d-lbtsn                                1/1     Running   0          33s

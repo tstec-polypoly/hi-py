@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hi-py-deployment
+  labels:
+    app: hi-py
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hi-py
+  template:
+    metadata:
+      labels:
+        app: hi-py
+    spec:
+      containers:
+      - name: hi-py
+        image: hi-py
+        ports:
+        - containerPort: 3737
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
