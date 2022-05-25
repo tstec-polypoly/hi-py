@@ -1,2 +1,3 @@
 # py-hi
-Simple python hello world script
+
+A simple python "hello world" script
