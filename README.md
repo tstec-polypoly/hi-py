@@ -4,6 +4,10 @@ Learn to deploy a simple Python "Hello, World!" script into Kubernetes.
 
 ## Prerequisites
 
+### Docker Desktop
+
+https://www.docker.com/products/docker-desktop/
+
 ### MacOS
 
 1. Install homebrew. https://brew.sh/
