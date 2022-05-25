@@ -50,7 +50,9 @@ local-path-storage   local-path-provisioner-9cd9bd544-2dm9t                  1/1
 
 ## Enable Deployment
 
-`kubectl apply -f hi-py-deployment.yml`
+```
+kubectl apply -f hi-py-deployment.yml
+```
 
 ## Inspect Deployment
 
@@ -86,11 +88,15 @@ Hello, world!%
 
 In `hi-py-deployment.yml` edit the following:
 
-From: `command: [ "python", "hi.py", "-pworld" ]`
+Change from: `command: [ "python", "hi.py", "-pworld" ]`
 
-To: `command: [ "python", "hi.py", "-ppolypoly" ]`
+... to: `command: [ "python", "hi.py", "-ppolypoly" ]`
 
-Then, re-apply the deployment with `kubectl apply -f hi-py-deployment.yml`
+Then, re-apply the deployment with:
+
+```
+kubectl apply -f hi-py-deployment.yml
+```
 
 ## Test Service
 
@@ -101,4 +107,6 @@ Hello, polypoly!%
 
 ## Cleanup
 
-`kind delete cluster --name k8s-hello-world`
+```
+kind delete cluster --name k8s-hello-world
+```
