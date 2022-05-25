@@ -1,4 +1,4 @@
-# py-hi
+# hi-py
 
 Learn to deploy a simple Python "Hello, World!" script into Kubernetes.
 
