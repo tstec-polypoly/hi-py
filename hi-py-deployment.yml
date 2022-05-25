@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hi-py
-        image: hi-py
+        image: ghcr.io/tstec-polypoly/hi-py:latest
         ports:
         - containerPort: 3737
         resources:
