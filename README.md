@@ -4,7 +4,7 @@ Learn to deploy a simple Python "Hello, World!" script into Kubernetes.
 
 ## Prerequisites
 
-### Docker Desktop
+### Docker Desktop (All Platforms)
 
 https://www.docker.com/products/docker-desktop/
 
