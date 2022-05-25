@@ -19,6 +19,7 @@ spec:
         image: ghcr.io/tstec-polypoly/hi-py:latest
         ports:
         - containerPort: 3737
+        command: [ "python", "hi.py", "-pworld" ]
         resources:
           requests:
             memory: "64Mi"

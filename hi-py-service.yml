@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hi-py-service
+spec:
+  selector:
+    app: hi-py
+  type: NodePort
+  ports:
+    - name: http
+      nodePort: 30000
+      targetPort: 3737
+      port: 8080
