@@ -44,6 +44,56 @@ kube-system          kube-scheduler-k8s-hello-world-control-plane            1/1
 local-path-storage   local-path-provisioner-9cd9bd544-2dm9t                  1/1     Running   0          33s
 ```
 
+## Enable Deployment
+
+`kubectl apply -f hi-py-deployment.yml`
+
+## Inspect Deployment
+
+```
+# kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+hi-py-deployment   0/2     2            0           10s
+```
+
+## Enable NodePort Service
+
+```
+kubectl apply -f hi-py-service.yml
+```
+
+## Inspect Service
+
+```
+# kubectl get services
+NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+hi-py-service   NodePort    10.96.40.242   <none>        8080:30000/TCP   17s
+kubernetes      ClusterIP   10.96.0.1      <none>        443/TCP          2m4s
+```
+
+## Test Service
+
+```
+# curl localhost:30000
+Hello, world!%
+```
+
+## Modify Deployment
+
+In `hi-py-deployment.yml` edit the following:
+
+From: `command: [ "python", "hi.py", "-pworld" ]`
+
+To: `command: [ "python", "hi.py", "-ppolypoly" ]`
+
+Then, re-apply the deployment with `kubectl apply -f hi-py-deployment.yml`
+
+## Test Service
+
+```
+# curl localhost:30000
+Hello, polypoly!%
+```
 
 ## Cleanup
 
